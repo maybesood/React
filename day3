@@ -71,3 +71,37 @@ return <h1 className="heading" style={customStyle}>
 
 export default Heading;
   
+
+
+
+#import export and modules
+1)
+#index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import pi,{doublepi, triplepi} from "./math";
+ReactDOM.render(
+  <ul>
+    <li>{pi}</li>
+    <li>{doublepi()}</li>
+    <li>{triplepi()}</li>
+  </ul>,
+  document.getElementById("root")
+);
+
+#math.jsx
+import React from "react";
+
+const pi=3.14;
+
+function doublepi(){
+  return pi*2;
+}
+
+function triplepi(){
+  return pi*3;
+}
+
+
+export default pi;
+export {doublepi, triplepi};
