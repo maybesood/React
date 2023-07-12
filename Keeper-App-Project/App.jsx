@@ -1,14 +1,31 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
+import Form from "./Form";
+
+var userIsRegistered = true;
+
+
+
+// function Show(){
+//   if (userIsRegistered = true){
+//     return (
+//       <div>
+//     <input type="text" placeholder="Username" />
+//     <input type="password" placeholder="Password" />
+//     </div>
+//     );
+//   }else{
+//     <div>
+//       <input type="text" placeholder="Username" />
+//     <input type="password" placeholder="Password" />
+//     <input type="password" placeholder="Confirm Password" />
+//     </div>
+//   }
+// }
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Note />
-      <Footer />
+    <div className="container">
+      <Form isRegistered={userIsRegistered = false} />
     </div>
   );
 }
